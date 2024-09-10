@@ -1,3 +1,4 @@
 [flake8]
 
 exclude = .git,venv,settings.py, manage.py, migrations
+max-line-length = 150
