@@ -4,6 +4,7 @@ sample tests
 from django.test import SimpleTestCase
 from app import cal
 
+
 class ClacTest(SimpleTestCase):
     """ Test the add function from the cal module """
     def test_add(self):
