@@ -21,7 +21,7 @@ class ComandTest(SimpleTestCase):
         patched_check.assert_called_once_with(databases=['default'])
 
     @patch('time.sleep')
-    def test_wait_for_db_not_ready(self, patched_check):
+    def test_wait_for_db_not_ready(self, patched_sleep, patched_check):
         """ Test waiting for db when db is not available """
         patched_check.side_effect = [Psycopg2OperationalError] * 2 + \
             [OperationalError] * 5 + [True]
